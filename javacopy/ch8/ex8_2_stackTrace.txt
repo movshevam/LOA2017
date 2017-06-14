@@ -1,0 +1,19 @@
+Stack Trace:
+Exception in thread "main" java.lang.StringIndexOutOfBoundsException:
+String index out of range: 6
+        at java.lang.String.charAt(String.java:694)
+        at BadString.getLastLetter(BadString.java:24)
+        at BadString.processWord(BadString.java:18)
+        at BadString.main(BadString.java:14)
+Read the stack trace in Section 8.4 and answer these questions:
+1.  What kind of Exception occurred, and what package is it defined in?
+  StringIndexOutOfBoundsException: wrong parameter value: out of bounds
+  Defined in java.lang package
+2.  What is the value of the index that caused the exception?
+  6
+3.  What method threw the exception, and where is that method defined?
+  getLastLetter, defined in processWord
+4.  What method invoked charAt?
+  getLastLetter
+5.  In BadString.java, what is the line number where charAt was invoked?
+  24

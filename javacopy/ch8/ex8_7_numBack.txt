@@ -1,0 +1,17 @@
+Exercise 8.7. A friend of yours shows you the following method and explains
+that if number is any two-digit number, the program will output the number
+backwards. He claims that if number is 17, the method will output 71.
+Is he right? If not, explain what the program actually does and modify it so
+that it does the right thing.
+     int number = 17;                               //
+     int lastDigit = number%10;                     //17%10 = 7
+     int firstDigit = number/10;                    //17/10 = 1
+     System.out.println(lastDigit + firstDigit);    //7+1 = 8
+
+     This program actually computes the sum of the digits.
+     The correct code would be:
+
+     int number = 17;
+     int lastDigit = number%10;
+     int firstDigit = number/10;
+     System.out.println(lastDigit + "" + firstDigit);

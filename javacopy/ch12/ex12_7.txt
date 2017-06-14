@@ -1,0 +1,47 @@
+Exercise 12.7. Some programmers disagree with the general rule that variables
+and methods should be given meaningful names. Instead, they think variables
+and methods should be named after fruit.
+For each of the following methods, write one sentence that describes abstractly
+what the method does. For each variable, identify the role it plays.
+
+/* Calculate the sum of all members of an array.
+  @param a - array of integers
+  @return sum of integers
+*/
+public static int banana(int[] a) {
+    int grape = 0;
+    int i = 0;
+    while (i < a.length) {
+        grape = grape + a[i];
+        i++;
+    }
+    return grape;
+}
+/* Find how many times an integer appears in an array.
+  @param a - array of integers
+  @param p - integer to be found
+  @return number of times p appears in array.
+*/
+public static int apple(int[] a, int p) {
+    int i = 0;
+    int pear = 0;
+    while (i < a.length) {
+        if (a[i] == p) pear++;
+        i++;
+    }
+    return pear;
+}
+/* Find index of first location of an integer in an array.
+  @param a - array of integers
+  @param p - integer to be found
+  @return i - location of integer in array
+          -1 if integer is not in array.
+*/
+public static int grapefruit(int[] a, int p) {
+    for (int i = 0; i<a.length; i++) {
+        if (a[i] == p) return i;
+    }
+return -1;
+}
+The purpose of this exercise is to practice reading code and recognizing
+the computation patterns we have seen.

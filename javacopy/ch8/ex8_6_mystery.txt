@@ -1,0 +1,22 @@
+What is the output of this program? Describe in a sentence what mystery does
+(not how it works).
+
+This program prints out a sentence or word backwards and also prints out the
+index of each character.
+
+public class Mystery {
+    public static String mystery(String s) {    //Allen
+        int i = s.length() - 1;                 //i=5-1
+        String total = "";                      //""
+        while (i >= 0 ) {
+          char ch = s.charAt(i);                //s.charAt(4) = n //e//l//l//A
+          System.out.println(i + "    " + ch);  //4    n
+          total = total + ch;                   //"n"
+          i--;                                  //3
+          }
+          return total;
+    }
+    public static void main(String[] args) {
+        System.out.println(mystery("Allen"));
+    }
+}
