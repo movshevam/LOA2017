@@ -1,3 +1,4 @@
+/*String operators: Concatenation of strings*/
 class str_operators{
   public static void main(String[] args){
     String bob = "spider";
@@ -9,5 +10,10 @@ class str_operators{
     String word2 = "hello\"";
     System.out.println(word2);
     //left side of assignment is always the variable name
+/*EXTRA:
+String + int = String*/
+    int number = 451;
+    String result = print + number;
+    System.out.println(result);
   }
 }
