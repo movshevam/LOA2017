@@ -1,3 +1,4 @@
+/*Rules for using, declaring, and setting values to variables */
 class variables {
   public static void main(String[] args){
     System.out.println("variable names should start with a letter" +
@@ -23,7 +24,7 @@ class variables {
     System.out.print(":");
     System.out.print(minute);
     System.out.println(".");
-    //this can also be printed out like so: vv But above is common
+    //this can also be printed out like so(but above is common):
     System.out.println("The current time is: " + hour + ":" + minute + ".");
   }
 }
