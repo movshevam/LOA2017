@@ -1,5 +1,10 @@
-import java.util.Calendar; //You can use calendar to get int values using its class methods
-import java.text.SimpleDateFormat;  //You input values received from Date() into a string pattern
+/*Another version of time.java file but for current time. Use of
+  java.util.Calendar: get int values of day, date, month, etc. by invoking its class methods
+  java.util.Date: gets all information related to the current date
+  java.text.SimpleDateFormat: inputs the date information into a string pattern
+  Text after the program contains pattern variables information.*/
+import java.util.Calendar;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 class current_time{
   public static void main(String[] args) {
@@ -19,6 +24,7 @@ class current_time{
     SimpleDateFormat timeStamp = new SimpleDateFormat("HH:mm:ss"); //object w/ parameter of a string pattern
     String date2 = timeStamp.format(cal.getTime()); //format present time into pattern
     System.out.println(date2 + "\n");
+    // "\n" adds a new line character. Works with any print function.
 
     /*Percentage of time passed:
       Get values of hour, minute, second from Calendar class methods. */
@@ -29,7 +35,7 @@ class current_time{
     int totsec = 24 * 60 * 60;  //Total seconds in a day
     int time_passed = hour*60*60 + minute*60 + second;  //Total seconds since midnight
     int percent = time_passed*100/totsec; //percentage of all seconds that have passed
-    System.out.println(percent + "%\n");
+    System.out.println(percent + "%\n"); //composition & concatenation
 
     /*Current date in European format:
       Day of the week, day, month, year.
