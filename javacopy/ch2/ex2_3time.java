@@ -29,7 +29,7 @@ class ex2_3time{
     hour = 23; minute = 43; second = 30; //round 2 of testing with different values
     /*Prints out number of seconds elapsed since midnight:*/
     System.out.println("Number of seconds since midnight: ");
-    int num_sec = hour * 60 * 60 + minute * 60 + second;
+    int num_sec = hour * 60 * 60 + minute * 60 + second; //composition
 /*variables used in a computation but never printed are intermediate or temporary
 variables. num_sec is not intermediate. Intermediate variables:
     int secInHour = hour*60*60;
