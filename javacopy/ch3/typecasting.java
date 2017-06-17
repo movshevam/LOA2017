@@ -9,9 +9,9 @@ class typecasting{
 
     double df = (int) 'c' /9; System.out.println("(int) 'c'/9 = " + df); //df = 11.0
     double dg = 'c' / 9; System.out.println("'c'/9 = " + dg); //dg = 11.0
-    double dh = 5.0%2.0; System.out.println("5.0%2.0 = " +dh); //dh = 1.0
+    double dh = 6%5.5; System.out.println("6%5.5 = " +dh); //dh = 1.0
     double di = (double) 3.33333 / 3; System.out.println("(double) 3.33333 /3 = " +di); //di = 1.11111
-
+    double dj = 'c' + 4.0; System.out.println("'c' + 4.0 = "+dj );
     newLine();
     System.out.println("Conversions to int: ");
     //int ia = 5.0/2.0; System.out.println("5.0/2.0 = " + ia);
@@ -28,9 +28,8 @@ class typecasting{
 
     //int ie = 5.0/(int) 2.0; System.out.println("5.0/(int) 2.0 = " + ie);
     //error: incompatible types: possible lossy conversion from double to int
-
     int ig = (int) 5.0 / (int) 2.0; System.out.println("(int) 5.0/(int) 2.0 = " + ig); //ig = 2
-    int ih = 'c'/ 9; System.out.println("'c'/9 = " + ih); // ih = 11
+    int ih = 'c'/9; System.out.println("'c'/9 = " + ih); // ih = 11
     int ii = ((int) 'c') / 9; System.out.println("((int) 'c')/9 = " + ii); //ii = 11
     int ij = ((int)5.0)%((int) 2.0); System.out.println("((int) 5.0)%((int) 2.0) = " + ij); //ij = 1
     //int ik = 2147483648 * 2.0; System.out.println("2147483648 * 2.0 = " + ik);
