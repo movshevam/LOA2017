@@ -3,7 +3,7 @@ double ( 1 / 3 ) will be a double
 1 / 3 will be 0.0
 double 1 / 3 will be a double
 
-arithmetic operations excluding modulus that use a double in the location with the operation of precedence give an end result of a double. 
+arithmetic operations excluding modulus that use a double in the location with the operation of precedence give an end result of a double.
 double fiveD = 5.5;
 1.0 / 3 + 4.1 + ( 5.5*10) = 0.3333333 + 4.1 + 55.0 = 59.43333333
 
@@ -46,3 +46,6 @@ Conversion to short:
 (short) intValue / intValue = short
 (short) doubleValue / (short) intVal = short
 doubleVal/ (short) intVal = COMPILER ERROR
+
+
+DIVIDING BY ZERO THROWS AN ArithmeticException ERROR, not a compiler error
