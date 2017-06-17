@@ -12,7 +12,7 @@ return value.
 WARNING: the return value gets very big very quickly. You should try it only for
 small values of m and n (not bigger than 2).
 */
-class Ackerman{
+class ex6_7ackerman{
   public static void main(String[] args){
     int answer = ack(1,1);
     System.out.println(answer);
