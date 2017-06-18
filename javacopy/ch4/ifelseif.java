@@ -19,6 +19,9 @@ class ifelseif{
     else if( x> y){
       System.out.println("2nd else if works");
     }
+    // else if( 3+x == y){
+    //   System.out.println("2nd else if works");
+    // }
 
     else{
       System.out.println("else works");
