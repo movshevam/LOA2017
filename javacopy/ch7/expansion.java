@@ -46,21 +46,28 @@ public static double myexpF(double x){
   }
   return sum;
 }
-//calcualte nth term value
+/* Calculates the value of an nth term by invoking factorial function.
+  @param x - the power e is raised to.
+  @param n - the number of the term.
+  @return oneterm - value of nth term.
+*/
 public static double oneterm(double x, int n){
   double oneterm = (Math.pow(x,n) / factorial(n));
   return oneterm;
 }
-//calculate n first terms using factorials
+/* Calculates the sum of first n terms of an infinite series expansion of e^x.
+  @param x - power e is raised to
+  @param n - number of first terms.
+  @return sum of first n terms.
+*/
 public static double myexp1(double x, int n){
-  // x^0/0! + x^1/1! + x^2/2! + ...
   int i =0;
-  double result = 0;
-  while(i < n){
-    result += oneterm(x,i);  //4^i / i!
+  double result = 0; //initial sum
+  while(i < n){      //loop though first n terms
+    result += oneterm(x,i); //add value of each term to sum.
     i++;
   }
-  return result;
+  return result; //return sum
 }
 //calculate n first terms using patterns
 public static double myexp2(double x, int n){
@@ -71,7 +78,7 @@ public static double myexp2(double x, int n){
   double factor = 1;
   while(i<n){
     factor = (x / i);                             //result += 1 * x / 1
-    term *= factor;    //result += result * x / 1
+    term *= factor;    //result *= result * x / 1
     sum += term;
     i++;
   }
