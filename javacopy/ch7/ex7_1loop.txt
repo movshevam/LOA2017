@@ -1,0 +1,49 @@
+Exercise 7.1. Consider the following code:
+
+public static void main(String[] args) {
+    loop(10);
+}
+public static void loop(int n) {
+    int i = n;
+    while (i > 0) {
+        System.out.println(i);
+        if (i%2 == 0) {
+          i = i/2;
+        } else {
+          i = i+1;
+          }
+    }
+}
+1. Draw a table that shows the value of the variables i and n during the
+execution of loop. The table should contain one column for each variable
+and one line for each iteration.
+10      10
+5       10
+6       10
+3       10
+4       10
+2       10
+1       10
+2       10
+1       10
+2       10
+1       10
+2       10
+1       10
+.       .
+.       .
+.       .
+2. What is the output of this program?
+10
+5
+6
+3
+4
+2
+1
+2
+1
+2
+1
+...
+infinity loop due to repetition of 2 and 1 .
