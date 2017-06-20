@@ -1,10 +1,13 @@
+import java.math.BigInteger;
+import java.math.BigDecimal;
 class ex7_5expansion{
   public static void main(String[] args) {
     System.out.println("infinite series expansion");
-    part1.testPart1();
-    part2.testPart2();
-    part3.testPart3();
-    part4.testPart4();
+    // part1.testPart1();
+    // part2.testPart2();
+    // part3.testPart3();
+    // part4.testPart4();
+    part5.checkLoop();
   }
 
 
@@ -27,34 +30,35 @@ class part1{
     int i=0;
     double sum = 0;
     while(i<n){
-      sum+= Math.pow(x,i) / factorial(i); //adds value of ith term
-      i++;
+      BigInteger temp = factorial(i);   //factorial value can get too big for an int
+      sum+= Math.pow(x,i) / temp.doubleValue(); //adds value of ith term
+      i++;                 //temp.doubleValue()= converts BigInteger to double
     }
     return sum;
   }
 
-  /** Calculates the factorial of n.
+  /** Calculates the factorial of n using BigInteger.
      @param n - integer.
      @return factorial.
   */
-  public static int factorial(int n){
+  public static BigInteger factorial(int n){
     int i=0;
-    int factorial = 1;  //value of factorial = 0!
+    BigInteger factorial = BigInteger.valueOf(1);  //value of factorial = 0!
     while(i < n){
-      factorial *= n-i;
+      BigInteger temp = BigInteger.valueOf(n-i); //value of n-i
+      factorial = factorial.multiply(temp);
       i++;
     }
     return factorial;
   }
-
   /** Tests factorial and myexp by printing loops of 5 elements each.
   */
   public static void testPart1(){
     System.out.println("testing part1");
-    // System.out.println("testing factorial:\nn\tn!");
-    // for(int i=0; i<6;i++){
-    //   System.out.println(i+"\t"+factorial(i));
-    // }
+    System.out.println("testing factorial:\nn\tn!");
+    for(int i=16; i<21;i++){
+      System.out.println(i+"\t"+factorial(i));
+    }
     // System.out.println("testing myexp:\nn\tmyexp(2,n)");
     // for(int i=0; i<6;i++){
     //   System.out.println(i+"\t"+myexp(2,i));
@@ -151,15 +155,25 @@ class part4{
   public static void check(double x, int n){
     System.out.println("testing part4 for n= "+n);
     System.out.format("%s%18s%10s%10s%n", "x","Math.exp(x)","part1","part2");
-    System.out.format("%.3f%10.5f%16.5f%10.5f%n", x, Math.exp(x),part1.myexp(x,n),part2.myexp(x,n));
+    System.out.format("%.3f|%10.5f|%16.5f|%10.5f%n", x, Math.exp(x),part1.myexp(x,n),part2.myexp(x,n));
   }
   /** Tests check for various values of x and n.
   */
   public static void testPart4(){
     // check(2,13);
     // check(3,5);
-    // check(-1,6);
-    // check(0,6);
+    check(-1,6);
+    check(0,6);
     check(4.5, 20);
+  }
+}
+class part5{
+  public static void checkLoop(){
+    double i=0.1;
+    while(i< 101){
+      System.out.println(i);
+      part4.check(i, 20);
+      i*=10;
+    }
   }
 }
