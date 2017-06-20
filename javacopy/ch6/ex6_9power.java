@@ -8,7 +8,7 @@ using x^n =  (x^n/2)^2.
 */
 class ex6_9power{
   public static void main(String[] args) {
-    System.out.println(power(2,4));
+    System.out.println(power(3,6));
 
   }
   /* Recursive method, finds the value of x raised to a power.

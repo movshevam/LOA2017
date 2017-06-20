@@ -14,7 +14,7 @@ small values of m and n (not bigger than 2).
 */
 class ex6_7ackerman{
   public static void main(String[] args){
-    int answer = ack(1,1);
+    int answer = ack(5,5);
     System.out.println(answer);
   }
   public static int ack(int m, int n){

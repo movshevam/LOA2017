@@ -21,7 +21,7 @@ prints the letters of the String, one on each line. It should be a void method.
 4. Write a method called printBackward that does the same thing as printString
 but that prints the String backward (one character per line).
 5. Write a method called reverseString that takes a String as a parameter and
-that returns a new String as a return value. The new String should contain the 
+that returns a new String as a return value. The new String should contain the
 same letters as the parameter, but in reverse order. For example, the output of
 the following code
          String backwards = reverseString("Allen Downey");
@@ -29,7 +29,7 @@ the following code
 should be
 yenwoD nellA
 */
-class ex6_6recurse{
+class ex6_8recurse{
   public static void main(String[] args) {
     String str = "Bures-sur-Yevette";
     System.out.println(first(str));
