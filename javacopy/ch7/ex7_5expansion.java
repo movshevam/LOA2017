@@ -1,13 +1,42 @@
+/*
+Exercise 7.5. One way to calculate e^x is to use the infinite series expansion
+ex =1+x+x2/2!+x3/3!+x4/4!+...
+If the loop variable is named i, then the ith term is xi/i!.
+1. Write a method called myexp that adds up the first n terms of this series.
+You can use the factorial method from Section 6.8 or your iterative version
+from the previous exercise.
+2. You can make this method much more e cient if you realize that in each
+iteration the numerator of the term is the same as its predecessor multiplied
+by x and the denominator is the same as its predecessor multiplied by i. Use
+this observation to eliminate the use of Math.pow and factorial, and check
+that you still get the same result.
+3. Write a method called check that takes a single parameter, x, and that
+prints the values of x, Math.exp(x) and myexp(x) for various values of x.
+The output should look something like:
+1.0 2.708333333333333 2.718281828459045
+HINT: you can use the String "\t" to print a tab character between
+columns of a table.
+4. Vary the number of terms in the series (the second argument that check
+sends to myexp) and see the e↵ect on the accuracy of the result. Adjust this
+value until the estimated value agrees with the “correct” answer when x is 1.
+5. Write a loop in main that invokes check with the values 0.1, 1.0, 10.0,
+and 100.0. How does the accuracy of the result vary as x varies? Compare
+the number of digits of agreement rather than the difference between the actual
+and estimated values.
+6. Add a loop in main that checks myexp with the values -0.1, -1.0, -10.0, and 
+-100.0. Comment on the accuracy.
+*/
 import java.math.BigInteger;
 import java.math.BigDecimal;
 class ex7_5expansion{
   public static void main(String[] args) {
     System.out.println("infinite series expansion");
-    // part1.testPart1();
-    // part2.testPart2();
-    // part3.testPart3();
-    // part4.testPart4();
+    part1.testPart1();
+    part2.testPart2();
+    part3.testPart3();
+    part4.testPart4();
     part5.checkLoop();
+    part6.checkLoop();
   }
 
 
@@ -36,7 +65,6 @@ class part1{
     }
     return sum;
   }
-
   /** Calculates the factorial of n using BigInteger.
      @param n - integer.
      @return factorial.
@@ -135,10 +163,10 @@ class part3{
   /** Tests check for various values of x.
   */
   public static void testPart3(){
-    // check(2);
-    // check(3);
-    // check(-1);
-    // check(0);
+    check(2);
+    check(3);
+    check(-1);
+    check(0);
     check(4.5);
   }
 }
@@ -167,10 +195,24 @@ class part4{
     check(4.5, 20);
   }
 }
+/** Part5: Checks exp with values 0.1, 1.0, 10.0, 100.0 in a loop.
+*/
 class part5{
   public static void checkLoop(){
     double i=0.1;
     while(i< 101){
+      System.out.println(i);
+      part4.check(i, 20);
+      i*=10;
+    }
+  }
+}
+/** Part6: Checks exp with values -0.1, -1.0, -10.0, -100.0 in a loop.
+*/
+class part6{
+  public static void checkLoop(){
+    double i=-0.1;
+    while(i> -101){
       System.out.println(i);
       part4.check(i, 20);
       i*=10;

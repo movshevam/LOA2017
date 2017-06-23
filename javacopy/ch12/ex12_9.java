@@ -35,7 +35,7 @@ class ex12_9{
     int targetIndex = findTarget(a, target);
     System.out.println(target + " has index " + targetIndex);
   }
-  /* Calculates the maximum value wihtin the whole array.
+  /** Calculates the maximum value wihtin the whole array.
      This is a wrapper method! maxInRange is a helper method!
     @param a - array of ints
   */
@@ -43,7 +43,7 @@ class ex12_9{
     int max = maxInRange(a, 0, a.length - 1);
     return max;
   }
-  /* Calculates the maximum value within a given section of an array.
+  /** Calculates the maximum value within a given section of an array.
     @param a - array of integers
     @param lowIndex - lower bound of sub array
     @param highIndex - upper bound of sub array(inclusive)
@@ -78,7 +78,7 @@ class ex12_9{
       else{
         max1 = maxInRange(a, lowIndex, lowIndex + length/2 - 1);
         max2 = maxInRange(a, lowIndex + length/2 , highIndex);
-        if(max1 > max2){
+        if(max1 > max2){ //
           max = max1;
           // System.out.println("max1: " + max);
         }
@@ -107,7 +107,7 @@ class ex12_9{
 
 
   }
-  /* Finds the index of a number within the array.
+  /** Finds the index of a number within the array.
     @param a - array of integers
     @param target - integer to be found
     @return index of integer if found
@@ -121,7 +121,10 @@ class ex12_9{
     }
     return -1;
   }
-  /* Wrapper method for finding index of a number
+  /** Wrapper method for finding index of a number
+    @param a - array where to find number
+    @param target - number to find
+    @return index of target
   */
   public static int findTarget(int[] a, int target){
     int targetIndex = find(a, target);
