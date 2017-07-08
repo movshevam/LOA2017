@@ -1,7 +1,7 @@
 class ex12_10{
   public static void main(String[] args) {
-    //testIndex();
-    //testSwap();
+    testIndex();
+    testSwap();
     testSort();
   }
   public static void testIndex(){

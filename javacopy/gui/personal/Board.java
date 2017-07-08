@@ -43,10 +43,6 @@ class Board extends Canvas{
 }
 class BoardLabel extends JPanel{
   public BoardLabel(){
-    super(new GridLayout(10,10));
-    JLabel alphalabel;
-    alphalabel = new JLabel("A");
-    alphalabel.setHorizontalTextPosition(JLabel.CENTER);
-    add(alphalabel);
+    
   }
 }

@@ -4,8 +4,13 @@ factorial function. Write an iterative version of factorial.
 */
 class ex7_4factorial{
   public static void main(String[] args){
-    int n = 5;
-    System.out.println( n + "! = " + factorial(n));
+    int n = -4;
+    if(n < 0){
+      System.out.println("Impossible to compute."); //DID NOT ADD THIS!!!
+    }
+    else{
+      System.out.println( n + "! = " + factorial(n));
+    }
   }
   public static int factorial(int n){
     int i = 0;

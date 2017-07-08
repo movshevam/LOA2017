@@ -23,7 +23,7 @@ value until the estimated value agrees with the “correct” answer when x is 1
 and 100.0. How does the accuracy of the result vary as x varies? Compare
 the number of digits of agreement rather than the difference between the actual
 and estimated values.
-6. Add a loop in main that checks myexp with the values -0.1, -1.0, -10.0, and 
+6. Add a loop in main that checks myexp with the values -0.1, -1.0, -10.0, and
 -100.0. Comment on the accuracy.
 */
 import java.math.BigInteger;
@@ -31,10 +31,10 @@ import java.math.BigDecimal;
 class ex7_5expansion{
   public static void main(String[] args) {
     System.out.println("infinite series expansion");
-    part1.testPart1();
-    part2.testPart2();
-    part3.testPart3();
-    part4.testPart4();
+    // part1.testPart1();
+    // part2.testPart2();
+    // part3.testPart3();
+    // part4.testPart4();
     part5.checkLoop();
     part6.checkLoop();
   }
@@ -83,17 +83,17 @@ class part1{
   */
   public static void testPart1(){
     System.out.println("testing part1");
-    System.out.println("testing factorial:\nn\tn!");
-    for(int i=16; i<21;i++){
-      System.out.println(i+"\t"+factorial(i));
-    }
+    // System.out.println("testing factorial:\nn\tn!");
+    // for(int i=16; i<21;i++){
+    //   System.out.println(i+"\t"+factorial(i));
+    // }
     // System.out.println("testing myexp:\nn\tmyexp(2,n)");
     // for(int i=0; i<6;i++){
     //   System.out.println(i+"\t"+myexp(2,i));
     // }
-    System.out.println("testing myexp:\nn\tmyexp(4.5,n)");
-    for(int i=16; i<21;i++){
-      System.out.println(i+"\t"+myexp(4.5,i));
+    System.out.println("testing myexp:\nn\tmyexp(1,n)");
+    for(int i=16; i<17;i++){
+      System.out.println(i+"\t"+myexp(1,i));
     }
   }
 }
@@ -141,9 +141,9 @@ class part2{
     // for(int i=0; i<6; i++){
     //   System.out.println(i+"\t"+myexp(2,i));
     // }
-    System.out.println("testing part2\nn\tmyexp(4.5,n)");
+    System.out.println("testing part2\nn\tmyexp(1,n)");
     for(int i=16; i<21; i++){
-      System.out.println(i+"\t"+myexp(4.5,i));
+      System.out.println(i+"\t"+myexp(1,i));
     }
   }
 }
@@ -213,7 +213,7 @@ class part6{
   public static void checkLoop(){
     double i=-0.1;
     while(i> -101){
-      System.out.println(i);
+      //System.out.println(i);
       part4.check(i, 20);
       i*=10;
     }

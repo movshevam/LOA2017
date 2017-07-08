@@ -23,8 +23,14 @@ in this table. How many of the entries seem unavoidable, as if there were no
 other choice? How many seem like arbitrary choices from several equally
 reasonable possibilities? How many seem problematic?
   unavoidable: all types concatenated with String
-  arbitrary:
-  problematic:
+  arbitrary: char and int addition
+  problematic: char added with char
+
+4. Here’s a puzzler: normally, the statement x++ is exactly equivalent to
+x=x+1. But if x is a char, it’s not! In that case,x++is legal, but x = x + 1
+causes an error. Try it out and see what the error message is, then see if
+you can figure out what is going on.
+ char + int = int , not a char.
 
 */
 class ex8_5_Test{

@@ -52,12 +52,14 @@ class ex8_9_Palindrome {
     System.out.println(middle(empty));
     */
   }
+  //takes a String and returns the first letter
   public static char first(String s){
     if(s.length() < 1){
       System.exit(0);
     }
     return s.charAt(0);
   }
+  //takes a String and returns the last letter
   public static char last(String s){
     int cslength = s.length() -1 ;
     return s.charAt(cslength);

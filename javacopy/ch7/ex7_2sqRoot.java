@@ -17,8 +17,9 @@ value.
 // time: 2:58 - 3:26, 3:30-3:40 . Total: 28 + 10 = 38 minutes
 class ex7_2sqRoot{
   public static void main(String[] args){
-    double a = 36.0;
+    double a = 2;
     System.out.println("\nValue of sqRoot: " +squareRoot(a));
+    System.out.println(Math.pow(squareRoot(a),2));
   }
   public static double squareRoot(double a){
     System.out.println("Value of a: " + a);
